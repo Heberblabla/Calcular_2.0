@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2C4A"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="383dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="#F2F0F0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/operacion"
+        android:layout_width="383dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="96dp"
+        android:textAlignment="textEnd"
+        android:textColor="#EDE2E2"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/siete"
+        android:layout_width="88dp"
+        android:layout_height="82dp"
+
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="7"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ocho"
+
+        app:layout_constraintEnd_toStartOf="@+id/ocho"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ocho"
+        android:layout_width="83dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+
+        android:text="8"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nueve"
+        app:layout_constraintEnd_toStartOf="@+id/nueve"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/siete" />
+
+    <Button
+        android:id="@+id/nueve"
+        android:layout_width="80dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="9"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/sumar"
+        app:layout_constraintEnd_toStartOf="@+id/sumar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ocho" />
+
+    <Button
+        android:id="@+id/sumar"
+        android:layout_width="87dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="+"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nueve"
+        app:layout_constraintTop_toBottomOf="@+id/borrar" />
+
+    <Button
+        android:id="@+id/cuatro"
+        android:layout_width="86dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="4"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toStartOf="@+id/cinco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/siete" />
+
+    <Button
+        android:id="@+id/cinco"
+        android:layout_width="93dp"
+        android:layout_height="78dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="5"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cuatro"
+        app:layout_constraintEnd_toStartOf="@+id/seis"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cuatro" />
+
+    <Button
+        android:id="@+id/seis"
+        android:layout_width="88dp"
+        android:layout_height="78dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cinco"
+        app:layout_constraintEnd_toStartOf="@+id/restar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cinco" />
+
+    <Button
+        android:id="@+id/restar"
+        android:layout_width="85dp"
+        android:layout_height="75dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="-"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/seis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/seis" />
+
+    <Button
+        android:id="@+id/uno"
+        android:layout_width="85dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="1"
+        android:textColor="#FDFDFD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuatro" />
+
+    <Button
+        android:id="@+id/dos"
+        android:layout_width="95dp"
+        android:layout_height="79dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="2"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/uno"
+        app:layout_constraintEnd_toStartOf="@+id/tres"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/uno" />
+
+    <Button
+        android:id="@+id/tres"
+        android:layout_width="90dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="3"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dos"
+        app:layout_constraintEnd_toStartOf="@+id/multiplcar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dos" />
+
+    <Button
+        android:id="@+id/multiplcar"
+        android:layout_width="89dp"
+        android:layout_height="85dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="x"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tres" />
+
+    <Button
+        android:id="@+id/cero"
+        android:layout_width="90dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="0"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toStartOf="@+id/puntito"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uno" />
+
+    <Button
+        android:id="@+id/puntito"
+        android:layout_width="92dp"
+        android:layout_height="84dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="."
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cero"
+        app:layout_constraintEnd_toStartOf="@+id/igual"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cero" />
+
+    <Button
+        android:id="@+id/igual"
+        android:layout_width="92dp"
+        android:layout_height="83dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="="
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/puntito"
+        app:layout_constraintEnd_toStartOf="@+id/dividiir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/puntito" />
+
+    <Button
+        android:id="@+id/dividiir"
+        android:layout_width="87dp"
+        android:layout_height="79dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="/"
+        android:textColor="#FDFDFD"
+        app:layout_constraintBaseline_toBaselineOf="@+id/igual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/igual" />
+
+    <Button
+        android:id="@+id/borrar"
+        android:layout_width="90dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#222222"
+        android:onClick="presionarBoton"
+        android:text="C"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operacion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
