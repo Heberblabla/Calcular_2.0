@@ -6,9 +6,11 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 
-class MainActivity : AppCompatActivity() {
+class Calculadora : AppCompatActivity() {
 
     lateinit var tvOperacion: TextView
     lateinit var tvResultado: TextView
@@ -18,7 +20,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // referenciamos las cajas de texto
+        // Oculta las barras del sistema :v
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.systemBars())
+        controller.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+
+
+        //cajas de textos
         tvOperacion = findViewById(R.id.operacion)
         tvResultado = findViewById(R.id.resultado)
 
@@ -48,21 +58,23 @@ class MainActivity : AppCompatActivity() {
             R.id.restar -> tvOperacion.text = num2 + "-"
             R.id.multiplcar -> tvOperacion.text = num2 + "*"
             R.id.dividiir -> tvOperacion.text = num2 + "/"
-            R.id.borrar -> tvOperacion.text = ""  // limpiar todo
+            R.id.borrar -> {
+                tvOperacion.text = ""
+                tvResultado.text = ""
+            }  // limpiar todo
             R.id.igual -> {
                 try {
                     val expresion = num2
                     val resultado = eval(expresion)
 
-                    // lista de frases (puedes agregar más)
+                    // lista de frases
                     val frases = listOf(
-                        "Es $resultado ps baboso :v",
-                        "Es $resultado oe especial",
-                        "Tu hermana waza :v",
-                        "Hello world!!",
-                         "$resultado",
-
-
+                        "Es $resultado, no seas ciclero :v",
+                        "¡Gánate con el $resultado, mano!",
+                        "Manya, salió $resultado.",
+                        "Esa es, $resultado de ley.",
+                        "Pucha... sale $resultado, ¿estás bien?",
+                        "Oe, estudia pe', es $resultado."
                     )
 
                     // elegir una frase random
