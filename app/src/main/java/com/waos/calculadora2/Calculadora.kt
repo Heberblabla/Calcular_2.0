@@ -69,13 +69,27 @@ class Calculadora : AppCompatActivity() {
 
                     // lista de frases
                     val frases = listOf(
-                        "Es $resultado, no seas ciclero :v",
-                        "¡Gánate con el $resultado, mano!",
-                        "Manya, salió $resultado.",
-                        "Esa es, $resultado de ley.",
-                        "Pucha... sale $resultado, ¿estás bien?",
-                        "Oe, estudia pe', es $resultado."
-                    )
+    "Es $resultado, no seas ciclero :v",
+    "¡Gánate con el $resultado, mano!",
+    "Manya, salió $resultado.",
+    "Esa es, $resultado de ley.",
+    "Pucha... sale $resultado, ¿estás bien?",
+    "Oe, estudia pe', es $resultado.",
+
+    // Nuevas
+    "Sale $resultado pe causa, clarito nomás.",
+    "¿Ves? $resultado, no era tan difícil pe.",
+    "Ahí tá, $resultado. Más fácil que la tabla del 1.",
+    "$resultado pues mano, la calculadora no miente.",
+    "Toma tu $resultado y no llores después.",
+    "$resultado, confirmado por la ciencia y la tía calculadora.",
+    "Listo pe, $resultado. Siguiente ejercicio sin miedo.",
+    "Ese $resultado está más fijo que combi en hora punta.",
+    "$resultado nomás salió, no reclames al árbitro.",
+    "Orgulloso estoy: $resultado 😌",
+    "$resultado pe… y sin yapa ah."
+)
+
 
                     // elegir una frase random
                     val fraseRandom = frases.random()
