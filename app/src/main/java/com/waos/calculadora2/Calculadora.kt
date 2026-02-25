@@ -9,6 +9,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import java.text.DecimalFormat
+
 
 class Calculadora : AppCompatActivity() {
 
@@ -37,12 +42,23 @@ class Calculadora : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        MobileAds.initialize(this) {}
+
+        val adView = findViewById<AdView>(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+
     }
 
     fun presionarBoton(view: View) {
         val num2 = tvOperacion.text.toString()
 
         when (view.id) {
+            R.id.borrarUno -> {
+                if (num2.isNotEmpty()) {
+                    tvOperacion.text = num2.dropLast(1)
+                }
+            }
             R.id.cero -> tvOperacion.text = num2 + "0"
             R.id.uno -> tvOperacion.text = num2 + "1"
             R.id.dos -> tvOperacion.text = num2 + "2"
@@ -65,7 +81,8 @@ class Calculadora : AppCompatActivity() {
             R.id.igual -> {
                 try {
                     val expresion = num2
-                    val resultado = eval(expresion)
+                    var resultado1 = eval(expresion)
+                    var resultado = formatResult(resultado1)
 
                     // lista de frases
                     val frases = listOf(
@@ -171,4 +188,13 @@ class Calculadora : AppCompatActivity() {
             }
         }.parse()
     }
+
+    fun formatResult(value: Double): String {
+        val df = DecimalFormat("#.##")
+        df.maximumFractionDigits = 2
+        df.minimumFractionDigits = 0
+        df.isGroupingUsed = false
+        return df.format(value)
+    }
+
 }
