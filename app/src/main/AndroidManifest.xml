@@ -17,7 +17,8 @@
         tools:targetApi="31">
         <activity
             android:name=".Configuraciones"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <!-- Esta será la pantalla principal al abrir la app -->
         <activity
             android:name=".Calculadora"

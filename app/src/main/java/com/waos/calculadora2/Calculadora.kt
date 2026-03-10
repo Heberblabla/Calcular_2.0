@@ -1,5 +1,6 @@
 package com.waos.calculadora2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -85,43 +86,19 @@ class Calculadora : AppCompatActivity() {
                     var resultado = formatResult(resultado1)
 
                     // lista de frases
-                    val frases = listOf(
-    "Es $resultado, no seas ciclero :v",
-    "Hace un momento zzz",
-                        "zzz acaba tu primaria",
-    "Manya, salió $resultado.",
-    "Esa es, $resultado de ley.",
-    "Pucha... sale $resultado, ¿está bien?",
-    "Oe, estudia pe', es $resultado.",
+                    val frases = GlobalData.obtenerFrasesActivas()
 
-    // Nuevas
-    "Sale $resultado pe causa, clarito nomás.",
-    "¿Ves? $resultado, no era tan difícil pe.",
-    "Ahí tá, $resultado. Más fácil que la tabla del 1.",
-    "$resultado pues mano, la LlantaCuladora no miente.",
-    "Toma tu $resultado y no llores después.",
-    "$resultado, confirmado por la ciencia y la tía LlantaCuladora.",
-    "Listo pe, $resultado. Siguiente ejercicio sin miedo.",
-    "Ese $resultado está más fijo que combi en hora punta.",
-    "$resultado nomás salió, no reclames al árbitro.",
-    "Orgulloso estoy: $resultado 😌",
-    "$resultado pe… y sin yapa ah.",
+                    // elegir frase base
+                    var fraseRandom = String.format(frases.random(), resultado)
 
-)
-
-
-                    // elegir una frase random
-                    var fraseRandom = ""
-                    if(resultado == "4"){
+                    // easter eggs
+                    if (resultado == "4" && GlobalData.switch2) {
                         fraseRandom = "tu vieja en 4"
-                    }else{
-                        if(resultado == "69"){
-                            fraseRandom = "La pose favorita de tu vieja ps el poderoso 69"
-                        }else{
-                            fraseRandom = frases.random()
-                        }
+                    } else if (resultado == "69" && GlobalData.switch2) {
+                        fraseRandom = "La pose favorita de tu vieja ps el poderoso 69"
                     }
 
+                    tvResultado.text = fraseRandom
 
                     tvResultado.text = fraseRandom
 
@@ -207,6 +184,11 @@ class Calculadora : AppCompatActivity() {
         df.minimumFractionDigits = 0
         df.isGroupingUsed = false
         return df.format(value)
+    }
+
+    fun configuraciones(view: View){
+        val intent = Intent(this, Configuraciones::class.java)
+        startActivity(intent)
     }
 
 }
