@@ -6,9 +6,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A9AB91"
+    android:background="@drawable/cuadro"
     tools:context=".Calculadora">
 
+
+    <Button
+        android:id="@+id/Configuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="@android:color/transparent"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -224,8 +237,8 @@
 
     <TextView
         android:id="@+id/resultado"
-        android:layout_width="368dp"
-        android:layout_height="72dp"
+        android:layout_width="354dp"
+        android:layout_height="76dp"
         android:fontFamily="@font/aladin"
         android:text="0"
         android:textAlignment="textEnd"
@@ -248,21 +261,22 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.420"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.170" />
+
 
     <Button
         android:id="@+id/borrarUno"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="97dp"
         android:layout_height="87dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="⌫"
-        android:textColor="#070505"
+        android:textColor="#0F0202"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -285,12 +299,12 @@
 
     <Button
         android:id="@+id/ocho"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
 
         android:text="8"
         android:textColor="#070505"
@@ -304,12 +318,12 @@
 
     <Button
         android:id="@+id/cuatro"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="4"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -322,12 +336,12 @@
 
     <Button
         android:id="@+id/uno"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="1"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -340,12 +354,12 @@
 
     <Button
         android:id="@+id/cero"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="0"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -361,7 +375,9 @@
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="C"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -370,18 +386,16 @@
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"/>
+        app:layout_constraintVertical_bias="0.352" />
 
     <Button
         android:id="@+id/dos"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="2"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -394,12 +408,12 @@
 
     <Button
         android:id="@+id/tres"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="3"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -412,12 +426,12 @@
 
     <Button
         android:id="@+id/igual"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="="
         android:textColor="#070505"
         android:textSize="48sp"
@@ -430,12 +444,12 @@
 
     <Button
         android:id="@+id/multiplcar"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="x"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -448,12 +462,12 @@
 
     <Button
         android:id="@+id/restar"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="-"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -466,12 +480,12 @@
 
     <Button
         android:id="@+id/puntito"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="."
         android:textColor="#070505"
         android:textSize="48sp"
@@ -484,13 +498,13 @@
 
     <Button
         android:id="@+id/siete"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
-
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
+
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="7"
         android:textColor="#070505"
 
@@ -504,12 +518,12 @@
 
     <Button
         android:id="@+id/sumar"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="+"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -522,12 +536,12 @@
 
     <Button
         android:id="@+id/seis"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="6"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -540,12 +554,12 @@
 
     <Button
         android:id="@+id/dividiir"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="/"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -558,12 +572,12 @@
 
     <Button
         android:id="@+id/cinco"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="5"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -576,12 +590,12 @@
 
     <Button
         android:id="@+id/nueve"
-        android:elevation="0dp"
-        android:stateListAnimator="@null"
         android:layout_width="88dp"
         android:layout_height="88dp"
         android:backgroundTint="#00222222"
+        android:elevation="0dp"
         android:onClick="presionarBoton"
+        android:stateListAnimator="@null"
         android:text="9"
         android:textColor="#070505"
         android:textSize="48sp"
@@ -599,7 +613,7 @@
         android:layout_width="398dp"
         android:layout_height="78dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:adUnitId="ca-app-pub-4214042047166873/2938667566"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.675"
